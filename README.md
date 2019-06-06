@@ -1,4 +1,4 @@
-# Azure Technical Academy - Architect day 2
+# Azure Technical Academy - Architect day2:  Architectures for running applications in cloud
 Second day is focusing on application architectures in Azure.
 
 Azure Stencils
