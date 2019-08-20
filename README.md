@@ -122,7 +122,7 @@ TBD
 
 ## Contacts
 
-### Tomas Kubica - Azure TSP at Microsoft
+### Tomas Kubica - Cloud Solutions Architect
 - https://www.linkedin.com/in/tkubica
 - https://github.com/tkubica12
 - https://twitter.com/tkubica
