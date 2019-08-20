@@ -60,14 +60,14 @@ Application architecture
 Requirements
 - To ease operations do not use IaaS, only PaaS
 - Design application that can scale based on time of day and usage to ensure optimal user experience while saving costs
-- Design solution for storing and serving static content in cost effective way and cache it close to user location
+- Design solution for storing and serving static content in cost effective way and cache it close to user locations
 - PDF files as well as records in database must have centralized joint full-text search capability
 - Application is designed for customers and requires authentication and authorization, account management and integrations with Google and Facebook logins
-- Users are uploading pictures of cars and we need automatically check and povide feedback when they accidentaly upload picture of something else
-- Users are uploading scanned paper forms and we need to parse information out of upload
+- Users are uploading pictures of cars and we need to automatically check and povide feedback when they accidentaly upload picture of something else
+- Users are uploading scanned paper forms and we need to parse information out of images
 - There is requirement for 4 environments - dev, test, staging and production
 - Design automated build and release with CI/CD pipeline
-- Video content need to be encoded to multiple bitrate streams so player can switch quality based on strenght of user connection, content need to be protected with Digital Rights Management
+- Video content needs to be encoded to multiple bitrate streams so player can switch quality based on strenght of user connection, content need to be protected with Digital Rights Management
 
 ## Scenario 3: Microservices-based application with containers
 Application architecture
