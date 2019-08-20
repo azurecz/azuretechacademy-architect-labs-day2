@@ -86,17 +86,21 @@ Requirements
 
 ## Scenario 4: IoT application
 Application architecture
-- IoT devices capturing telemetry
-- IoT gateway devices doing pre-processing including aggregations and anomaly detection
-- Central streaming data processing and storing RAW data for deeper analysis (which by itself is not in scope of this project) and aggregated views for application and visualization using JSON-based NoSQL database
+- IoT devices capturing telemetry from machines (Azure Sphere)
+- IoT gateway devices doing pre-processing including aggregations and anomaly detection (Raspberry Pi)
+- Two legacy factories store telemetry as files on local SMB storage
+- Centralized stream data processing
+  - storing RAW data for deeper analysis (which by itself is not in scope of this project) 
+  - storing aggregated data for visualization using JSON-based NoSQL database
 
 Requirements
 - Use PaaS to connect and manage devices and collect data
-- Find solution to prepare filtering, aggregation and anomaly detection logic in cloud while pushing it IoT gateway devices for processing
-- Find serverless solution to process captured data, export to RAW storage, do stream analytics and write results to NoSQL database
-- When anomaly is detected in stream analytics trigger code to create alarm and based on user preferences react by sending SMS, email or create incident in ITSM tool
-- Web application will provided to customer to manage alerts and visualize data
-- Use PowerBI solution, but not standalone - there is requirement to build this functionality into custom web applicatio mentioned earlier
+- Find solution to prepare filtering (custom code), data aggregation and anomaly detection logic centrally in cloud and publish it to IoT gateway devices for local processing
+- Find serverless solution to process captured data, export to RAW storage, calculate aggregations and write results to NoSQL database
+- Detect anomalies in data stream and trigger custom code to create alarm and based on user preferences react by sending SMS, email, pushing notification to mobile application or create incident in ITSM tool
+- Web application will be available to customers for alerts management and visualization
+- As visualization engine use PowerBI, but there is requirement to add this functionality into custom web application mentioned earlier
+- Modernize legacy factories data collection by deploying cloud-managed SMB share with local data aggregation capabilities and automatically push aggregated data to Azure Blob Storage for central processing. You need to reconnect if connectivity goes down and limit outbound bandwidth during daytime. Minimize custom development of such solution.
 
 ## Scenario 5: Custom business applications built on top of Microsoft SaaS
 Application architecture
