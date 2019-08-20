@@ -104,12 +104,14 @@ Requirements
 
 ## Scenario 5: Custom business applications built on top of Microsoft SaaS
 Application architecture
-- Business applications built on top of SaaS platforms (Sharepoint Online, Dynamics)
+- Business applications built on top of SaaS platforms (Sharepoint Online, Dynamics365, Office365)
 
 Requirements
 - Provide solution for rapid application development with as little coding as possible
+- Provide custom Machine Learning features with as little coding as possible
 - Provide solution for distributing mobile applications to internal users
 - Use serverless to provide integration logic and workflows between Sharepoint, Dynamics, Office365 and legacy systems
+- Design simple IoT add-on with as little coding as posible
 
 # Agenda and next steps 
 
