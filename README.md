@@ -38,15 +38,17 @@ Application architecture
 - Microsoft SQL database
 
 Requirements
-- Design scalable web layer with ability to easily scale number of nodes based on load
-- Design highly application layer active/active
-- Web and application layer requires IaaS due to legacy code
-- Ensure TLS is terminated on security device with Web Application Firewall
+- All components must be deployed with zone redundancy
+- Design scalable web layer with ability to easily scale number of nodes based on load with advanced balancer (reverse proxy)
+- Design highly available application layer as active/active with load balancer
+- Web and application layers require IaaS due to legacy code that is using low-level OS calls
+- Ensure TLS is terminated on security device with Web Application Firewall functionality
 - Protect against DDoS
-- To achieve high availabilitzy make sure solution use multiple availability zones
-- To ease operations customer would prefer managed SQL (PaaS), but there is requirment for good compatibility with standard tooling and database must be deployed into customer VNET
-- Application is accessing legacy systems on-premises, design private connectivity solution with availability zone redundancy
-- Ensure DR to different Azure region
+- To achieve high availability make sure solution use multiple availability zones
+- Application has been tested to work with Azure SQL Database PaaS
+- Application is accessing legacy systems on-premises, design private connectivity solution with leased line and IPSec VPN as backup
+- Calculate composite Azure infrastructure SLA. Does it meet 99,9%?
+- Ensure DR to different Azure region with RPO < 24h and RTO < 24h
 
 ## Scenario 2: Modern web-based application
 Application architecture
