@@ -75,12 +75,12 @@ Application architecture
 - 30 containerized microservices
 - Angular frontend
 - Asynchronous operations between some services using publish/subscribe pattern
-- Microsoft SQL database
+- Microsoft SQL database for each microservice
 
 Requirements
 - Design secure and highly available store for container images
 - Design container orchestration cluster to deploy microservices
-- To ease development of Angular frontend design solution to streamline and manage APIs
+- To ease development of Angular frontend code find solution to document, manage and secure backend APIs
 - Externalize all stateful operations into PaaS including queing and database
 - Design CI/CD pipeline
 
